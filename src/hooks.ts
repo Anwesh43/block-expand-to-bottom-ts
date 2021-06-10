@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, CSSProperties} from 'react'
 
 const delay : number = 20 
 const scGap : number = 0.02 
@@ -58,7 +58,7 @@ const divideScale = (
     n : number 
 ) : number => Math.min(1 / n, maxScale(scale, i, n)) * n 
 
-export const useStyle = (w : number, h : number, scale : number) => {
+export const useStyle = (w : number, h : number, scale : number) : CSSProperties => {
     const position = 'absolute'
     const size : number = Math.min(w, h) / 10 
     const sc1 : number = divideScale(scale, 0, 4)

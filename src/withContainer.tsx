@@ -3,11 +3,11 @@ import {useAnimatedScale, useDimension} from './hooks'
 const withContainer = (MainComponent : React.FC<any>) : React.FC<any> => {
     return () => {
         const {w, h} = useDimension()
-        const {scale, start} = useAnimatedScale()
+        const {scale : onClick, start} = useAnimatedScale()
         const props = {
             w, 
             h, 
-            scale, 
+            onClick, 
             start
         }
         return (
